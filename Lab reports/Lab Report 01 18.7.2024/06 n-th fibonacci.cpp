@@ -1,0 +1,1 @@
+#include <iostream>using namespace std;int main() {    int num, fibo, first=-1, second=1;    cout << "Enter an Integer Number : ";    cin >> num;    cout << endl << "Fibonacci series : ";    for(int i=0; i<num; i++) {        fibo = first + second;        first = second;        second = fibo;        cout << fibo << " ";    }    cout << endl;    return 0;}
