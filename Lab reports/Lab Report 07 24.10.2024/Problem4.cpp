@@ -2,35 +2,30 @@
 using namespace std;
 
 class Base {
-private:
-
+protected:
+    int age;
+    string name;
 public:
-    Base () {
-        cout << "Base Constructor called..." << endl;
-    }
-    ~Base () {
-        cout << "Base Destructor called..." << endl;
-    }
-
 
 };
 
-class Derived : public Base {
+class Derived : private Base {
 
 public:
-    Derived () {
-        cout << "Derived Constructor called..." << endl;
+    void setValue(int ag, string nm) {
+        age = ag;
+        name = nm;
     }
-    ~Derived () {
-        cout << "Derived Destructor called..." << endl;
+    void display() {
+        cout << "Name : " << name << endl << "Age : " << age << endl;
     }
-
-
 };
 
-int main () {
-    system ("cls");
+int main() {
+    system("cls");
     Derived d1;
+    d1.setValue(20, "Atif");
+    d1.display();
 
     return 0;
 }
