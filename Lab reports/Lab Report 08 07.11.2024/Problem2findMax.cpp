@@ -26,7 +26,7 @@ public:
   int findMax(int n1, int n2, int n3) {
     x = n1;
     y = n2;
-    z = n2;
+    z = n3;
 
     return max(x, max(y, z));
   }
@@ -35,11 +35,11 @@ public:
 int main() {
   system("cls");
 
-  FindMaxNumber obj1, obj2, obj3;
+  FindMaxNumber obj1;
 
-  cout << "Maximum of two Integers :" << obj1.findMax(11.16f, 325.41) << endl;
-  cout << "Maximum of two floating-point numbers :" << obj2.findMax(11, 22) << endl;
-  cout << "Maximum of three Integers :" << obj3.findMax(12, 25, 30) << endl;
+  cout << "Maximum of two Integers :" << obj1.findMax(11, 22) << endl;
+  cout << "Maximum of two floating-point numbers :" << obj1.findMax(11.16f, 325.41) << endl;
+  cout << "Maximum of three Integers :" << obj1.findMax(12, 25, 30) << endl;
 
   return 0;
 }
