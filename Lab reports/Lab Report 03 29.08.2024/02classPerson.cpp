@@ -9,8 +9,7 @@ private:
     int age;
     string name, country;
 public:
-    void setValue()
-    {
+    void setValue() {
         cout<< "Enter Person Name : ";
         getline(cin,name);
         cout<<endl<< "Enter Person Age : ";
@@ -18,8 +17,7 @@ public:
         cout<<endl<< "Enter Person Country : ";
         cin>>country;
     }
-    void getValue()
-    {
+    void getValue() {
         cout<<endl<< "-------Person Information-------\n" <<endl;
         cout<< "Person Name : " <<name<<endl;
         cout<<endl<< "Person Age : " <<age<<endl;
@@ -28,8 +26,7 @@ public:
     }
 };
 
-int main()
-{
+int main() {
     Person pr1;
     pr1.setValue();
     pr1.getValue();

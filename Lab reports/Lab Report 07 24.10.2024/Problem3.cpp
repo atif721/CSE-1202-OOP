@@ -11,8 +11,6 @@ public:
   ~Base() {
     cout << "Base Destructor called..." << endl;
   }
-
-
 };
 
 class Derived : public Base {
@@ -24,8 +22,6 @@ public:
   ~Derived() {
     cout << "Derived Destructor called..." << endl;
   }
-
-
 };
 
 int main() {

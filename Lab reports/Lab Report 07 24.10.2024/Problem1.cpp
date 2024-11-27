@@ -20,7 +20,7 @@ public:
   }
 };
 
-class Car : public Vehicle {
+class Car : private Vehicle {
 private:
   int model_2;
 

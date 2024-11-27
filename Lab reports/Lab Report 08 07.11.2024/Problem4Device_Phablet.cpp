@@ -9,7 +9,6 @@ public:
     Device(string nm) : deviceName(nm) {
         cout << "Device Name : " << deviceName << endl;
     }
-
 };
 
 class Phone : virtual public Device {
@@ -40,12 +39,10 @@ public:
     }
 };
 
-
 int main() {
     system("cls");
 
     Phablet ph1("SAM-11QS");
-
 
     return 0;
 }

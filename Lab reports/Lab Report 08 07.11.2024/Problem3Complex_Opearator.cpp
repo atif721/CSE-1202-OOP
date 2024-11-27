@@ -30,10 +30,7 @@ public:
   }
 
   void output() {
-    if (imag < 0)
-      cout << "Output Complex number: " << real << imag << "i" << endl;
-    else
-      cout << "Output Complex number: " << real << "+" << imag << "i" << endl;
+    cout << "Complex number: " << real << "+" << imag << "i" << endl;
   }
 };
 int main() {
@@ -49,7 +46,6 @@ int main() {
   additionR.output();
   subtractionR.output();
   multiplicationR.output();
-
 
   return 0;
 }

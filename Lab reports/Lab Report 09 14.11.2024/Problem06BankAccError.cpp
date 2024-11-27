@@ -22,7 +22,6 @@ int main() {
 
     BankAccount acc1(1000.55);
 
-
     try {
         cout << "Withdrawn Ammount : " << acc1.withdrawl(440.35) << endl;
     }
@@ -31,7 +30,7 @@ int main() {
     }
 
     cout << "" << endl;
-    
+
     try {
         cout << "Withdrawn Ammount : " << acc1.withdrawl(5000.35) << endl;
     }
