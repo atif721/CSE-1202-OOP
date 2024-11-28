@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 
 class BankAccount {
@@ -13,30 +12,30 @@ public:
         if (balance < withdrawn) {
             throw 0;
         }
-        return (balance - withdrawn);
+        balance = balance - withdraw;
+        return withdrawn;
     }
 };
 
-int main() {
-    system("cls");
-
-    BankAccount acc1(1000.55);
+void CheckWithdraw(double balance2, double withdraw2) {
+    BankAccount acc1(balance2);
 
     try {
-        cout << "Withdrawn Ammount : " << acc1.withdrawl(440.35) << endl;
+        cout << "Withdrawn Ammount : " << acc1.withdrawl(withdraw2) << endl;
     }
     catch (int e) {
         cout << "Error! Insufficient funds." << endl;
     }
 
     cout << "" << endl;
+}
 
-    try {
-        cout << "Withdrawn Ammount : " << acc1.withdrawl(5000.35) << endl;
-    }
-    catch (int e) {
-        cout << "Error! Insufficient funds." << endl;
-    }
+
+int main() {
+    system("cls");
+
+    CheckWithdraw(5000.55, 3000.33);
+    CheckWithdraw(10120.477, 13020.56);
 
     return 0;
 }

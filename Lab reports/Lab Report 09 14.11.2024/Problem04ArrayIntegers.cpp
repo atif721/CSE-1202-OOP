@@ -1,43 +1,28 @@
 #include <iostream>
-
 using namespace std;
 
-int accessArrayElement(int arr [], int index) {
+void CheckArray() {
+    int array[5] = { 10, 20, 30, 40, 50 };
+    int index;
 
-    if (index < 0 || index >= 5) {
-        throw 0;
+    try {
+        cout << "Enter array index (0 to 4) : ";
+        cin >> index;
+        if (index > 4) {
+            throw "error";
+        }
+        cout << "At index " << index << " element is " << array[index] << endl;
     }
-    return arr[index];
+    catch (...) {
+        cout << "Array index out of bounds." << endl;
+    }
 }
 
 int main() {
     system("cls");
 
-    int arr[5] = { 10, 20, 30, 40, 50 };
-
-    int index;
-
-    cout << "Enter Index (0 to 4) : ";
-    cin >> index;
-
-    try {
-        int value = accessArrayElement(arr, index);
-        cout << "Element at index " << index << " is " << value << endl;
-    }
-    catch (int e) {
-        cout << "Error! Array index out of bounds. " << endl;
-    }
-
-    cout << endl << "Enter Index (0 to 4) : ";
-    cin >> index;
-
-    try {
-        int value = accessArrayElement(arr, index);
-        cout << "Element at index " << index << " is " << value << endl;
-    }
-    catch (int e) {
-        cout << "Error! Array index out of bounds. " << endl;
-    }
+    CheckArray();
+    CheckArray();
 
     return 0;
 }

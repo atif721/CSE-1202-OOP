@@ -1,41 +1,26 @@
 #include <iostream>
-
 using namespace std;
 
-int TestValidAge(int age) {
-
-    if (age < 0 || age >= 150) {
-        throw 0;
+void ValidAge() {
+    try {
+        int age;
+        cout << "Enter age (0-150) : ";
+        cin >> age;
+        if (age >= 150 || age < 0) {
+            throw 0;
+        }
+        cout << "Entered age is : " << age << endl;
     }
-    return age;
+    catch (int e) {
+        cout << "Invalid age entered " << endl;
+    }
 }
 
 int main() {
     system("cls");
 
-    int age;
-
-    cout << "Enter Age : ";
-    cin >> age;
-
-    try {
-        int value = TestValidAge(age);
-        cout << "Entered Age is : " << age << endl;
-    }
-    catch (int e) {
-        cout << "Error! Invalid age entered." << endl;
-    }
-
-    cout << endl << "Enter Age : ";
-    cin >> age;
-
-    try {
-        int value = TestValidAge(age);
-        cout << "Entered Age is : " << age << endl;
-    }
-    catch (int e) {
-        cout << "Error! Invalid age entered." << endl;
-    }
+    ValidAge();
+    ValidAge();
 
     return 0;
 }
